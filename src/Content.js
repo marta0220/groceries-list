@@ -23,7 +23,17 @@ export default function Content() {
               checked={product.checked}
               className="col"
             />
-            <label className="col">{product.name}</label>{" "}
+            <label
+              onDoubleClick={() => handleCheck(product.id)}
+              style={
+                product.checked === true
+                  ? { textDecoration: "line-through" }
+                  : null
+              }
+              className="col"
+            >
+              {product.name}
+            </label>{" "}
             <button className="btn col">
               <i class="fa-solid fa-trash-can trash"></i>
             </button>
