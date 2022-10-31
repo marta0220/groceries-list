@@ -4,6 +4,7 @@ body {
   background-color: #1b351ec6;
   text-align: center;
 }
+
 header {
   background-image: url("header-background.jpg");
   color: white;
@@ -13,6 +14,15 @@ header {
   background-size: cover;
   padding: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+main {
+  margin: 30px 20%;
+}
+li {
+  background-color: #b4d0b8;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 2px;
 }
 footer {
   position: fixed;
