@@ -5,6 +5,7 @@ export default function ProductList({ products, handleCheck, handleDelete }) {
       {products.map((product) => (
         <Product
           product={product}
+          key={product.id}
           handleCheck={handleCheck}
           handleDelete={handleDelete}
         />
