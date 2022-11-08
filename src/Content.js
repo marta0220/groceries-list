@@ -1,22 +1,4 @@
-import { useState } from "react";
-export default function Content() {
-  const [products, setProducts] = useState([
-    { id: 1, name: "bread", checked: false },
-    { id: 2, name: "milk", checked: false },
-    { id: 3, name: "eggs", checked: false },
-  ]);
-  function handleCheck(id) {
-    const listProducts = products.map((product) =>
-      product.id === id ? { ...product, checked: !product.checked } : product
-    );
-    setProducts(listProducts);
-    localStorage.setProduct("shoppinglist", JSON.stringify(listProducts));
-  }
-  function handleDelete(id) {
-    const listProducts = products.filter((product) => product.id !== id);
-    setProducts(listProducts);
-    localStorage.setProduct("shoppinglist", JSON.stringify(listProducts));
-  }
+export default function Content({ products, handleCheck, handleDelete }) {
   return (
     <main className="container">
       {products.length ? (
