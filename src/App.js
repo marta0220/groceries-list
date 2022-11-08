@@ -11,9 +11,9 @@ function App() {
     { id: 3, name: "eggs", checked: false },
   ]);
   const [newProduct, setNewProduct] = useState("");
-  function setAndSaveProducts(listProducts) {
-    setProducts(listProducts);
-    localStorage.setProduct("shoppinglist", JSON.stringify(listProducts));
+  function setAndSaveProducts(newItems) {
+    setProducts(newItems);
+    localStorage.setProduct("shoppinglist", JSON.stringify(newItems));
   }
   function addProduct(product) {
     const id = products.length ? products[products.length - 1].id + 1 : 1;
@@ -35,8 +35,8 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     if (!newProduct) return;
-    addProduct(newProduct);
     setNewProduct("");
+    addProduct(newProduct);
   }
   return (
     <div className="App">
