@@ -1,13 +1,20 @@
+:root {
+  --page-background-color: #6d9886;
+  --product-background-color: #393e46;
+  --accent-color: #f2e7d5;
+  --text-color: #f7f7f7;
+}
 body {
   margin: 0;
   font-family: "Roboto Mono", monospace;
-  background-color: #1b351ec6;
+  background-color: var(--page-background-color);
   text-align: center;
+  color: var(--text-color);
 }
 
 header {
   background-image: url("header-background.jpg");
-  color: white;
+
   font-size: 60px;
   font-weight: bold;
 
@@ -21,39 +28,36 @@ header {
 .AddProduct input {
   width: 30%;
 }
-.add-button {
-  color: white;
-  font-size: 20px;
-  margin: 10px;
-  transition: all 200ms ease-in-out;
-}
-.add-button :hover {
-  color: rgb(195, 189, 189);
-}
+
 main {
-  margin: 30px 20%;
+  margin: 30px 15%;
+}
+ul {
+  padding: 0;
 }
 li {
-  background-color: #b4d0b8;
+  background-color: var(--product-background-color);
   border-radius: 5px;
   margin: 5px;
-  padding: 2px;
+  padding: 3px;
+}
+button .trash {
+  color: var(--text-color);
 }
 button .trash:hover {
-  color: rgb(167, 24, 24);
+  color: rgb(233, 47, 47);
 }
 footer {
-  color: white;
   position: fixed;
   bottom: 0;
   margin: 0;
   width: 100%;
-  background-color: #1b351eef;
+  background-color: var(--product-background-color);
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
   padding: 5px;
 }
 footer a {
-  color: rgb(101, 138, 102);
+  color: var(--page-background-color);
   font-size: 10px;
   text-decoration: none;
   display: block;
