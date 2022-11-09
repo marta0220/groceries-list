@@ -1,31 +1,38 @@
 :root {
   --page-background-color: #6d9886;
   --product-background-color: #393e46;
-  --accent-color: #f2e7d5;
+  --black-color: rgb(33, 37, 41);
   --text-color: #f7f7f7;
 }
 body {
+  background-color: var(--page-background-color);
   margin: 0;
   font-family: "Roboto Mono", monospace;
-  background-color: var(--page-background-color);
-  text-align: center;
   color: var(--text-color);
+  text-align: center;
 }
 
 header {
   background-image: url("header-background.jpg");
-
-  font-size: 60px;
-  font-weight: bold;
-
   background-size: cover;
   padding: 20px;
+  border-bottom: 5px solid var(--black-color);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  font-size: 60px;
+  font-weight: bold;
+  -webkit-text-stroke: 3px var(--black-color);
 }
 .AddProduct {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 .AddProduct input {
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+}
+.AddProduct .add {
+  margin: 10px auto;
+  display: block;
   width: 30%;
 }
 
@@ -41,6 +48,9 @@ li {
   margin: 5px;
   padding: 3px;
 }
+input[type="checkbox" i] {
+  cursor: pointer;
+}
 button .trash {
   color: var(--text-color);
 }
@@ -49,12 +59,12 @@ button .trash:hover {
 }
 footer {
   position: fixed;
+  width: 100%;
   bottom: 0;
   margin: 0;
-  width: 100%;
-  background-color: var(--product-background-color);
-  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
   padding: 5px;
+  background-color: var(--black-color);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
 }
 footer a {
   color: var(--page-background-color);

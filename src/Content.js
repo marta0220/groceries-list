@@ -1,7 +1,7 @@
 import ProductList from "./ProductList";
 export default function Content({ products, handleCheck, handleDelete }) {
   return (
-    <main className="container">
+    <main>
       {products.length ? (
         <ProductList
           products={products}

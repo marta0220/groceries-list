@@ -14,7 +14,10 @@ export default function AddProduct({
         autoFocus
       />
 
-      <button type="submit"> Add</button>
+      <button type="submit" className="btn btn-dark add">
+        {" "}
+        + Add
+      </button>
     </form>
   );
 }
